@@ -2,7 +2,7 @@ body {
     background-color: #5c3a1e;
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif;
+    font-family: 'Mythshire', serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
 .parchment {
     background-color: #FCF5E5;
     width: 80%;
-    padding: 50px;
+    padding: 40px;
     border: 2px solid #d4c2a2;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
@@ -21,41 +21,23 @@ body {
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding: none;
+    margin: none;
+    gap: 20px;
     justify-content: center;
-    margin-bottom: 35px;
-    font-size: 15px;
 }
 
 nav ul a {
     color: black;
-    background-color: #e7dbc2;
     text-decoration: none;
-    padding: 10px;
-    border: 2px solid black;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
 }
 
 nav ul a:hover {
     background-color: brown; /*change color when a tab is selected or not*/
-    color: white
-}
-
-.char_info_section {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.char_info_section img {
-    width: 250px;
-    height: auto;
 }
 
 .char_info_section ul {
     list-style: none;
-    font-size: 40px;
-    padding: 0;
-    margin: 0;
+    padding: none;
+    margin: none;
 }

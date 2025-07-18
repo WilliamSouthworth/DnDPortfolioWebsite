@@ -7,33 +7,87 @@
     <link rel="stylesheet" href="homepagestyles.css" />
 </head>
 <body>
-    <div class="parchment">
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="#">Character Sheet</a></li>
-                    <li><a href="#">Backstory</a></li>
-                    <li><a href="#">Previous Parties</a></li>
-                    <li><a href="#">Quests</a></li>
-                    <li><a href="#">Reputation</a></li>
-                    <li><a href="#">Send Raven</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section class="char_info_section">
-            <img src="lil_skelington.jpg" alt="profile_picture">
+    <div class="parchment_container">
+        <!----------TOP NAVAGATION TABS---------->
+        <nav>
             <ul>
-                <li><strong>Name:</strong> <u>William Southowrth</u></li>
-                <li><strong>Class:</strong> <u>Web Developer</u></li>
-                <li><strong>Race:</strong> <u>Caffinated Human</u></li>
-                <li><strong>Alignment:</strong> <u>Chaotic Good</u></li>
+                <li><button onclick="">Character Sheet</button></li>
+                <li><button onclick="">Backstory</button></li>
+                <li><button onclick="">Previous Parties</button></li>
+                <li><button onclick="">Quests</button></li>
+                <li><button onclick="">Reputation</button></li>
+                <li><button onclick="">Send Raven</button></li>
             </ul>
-        </section>
+        </nav>
+        <div class="parchment">
+            <!----------CHARACTER INFO SECTION---------->
+            <section class="char_info_section">
+                <img src="lil_skelington.jpg" alt="profile_picture">
+                <ul>
+                    <li><strong>Name:</strong> <u>&nbsp;&nbsp;&nbsp;&nbsp;William Southowrth&nbsp;&nbsp;&nbsp;&nbsp;</u></li>
+                    <li><strong>Class:</strong> <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></li>
+                    <li><strong>Race:</strong> <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caffinated Human&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></li>
+                    <li><strong>Alignment:</strong> <u>&nbsp;&nbsp;&nbsp;&nbsp;Chaotic Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></li>
+                </ul>
 
-        <section>
-            <!--Level Area-->
-        </section>
+                <div class="char_level">
+                    <h2><strong><u>LEVEL</u></strong></h2>
+                    <p id="char_level">3</p>
+                </div>
+            </section>
+            <!----------CHARACTER STAT BOXES---------->
+            <section class="char_lower_section">
+                <section class="char_stats">
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>STRENGTH</u></strong></div>
+                        <div class="stat_level">18</div>
+                        <div class="stat_description">Coding skills</div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>DEXTERITY</u></strong></div>
+                        <div class="stat_level">4</div>
+                        <div class="stat_description">Ticket Speed</div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>CONSTITUTION</u></strong></div>
+                        <div class="stat_level">17</div>
+                        <div class="stat_description">Persistence</div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>INTELLIGENCE</u></strong></div>
+                        <div class="stat_level">8</div>
+                        <div class="stat_description">Problem Solving</div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>WISDOM</u></strong></div>
+                        <div class="stat_level">14</div>
+                        <div class="stat_description">Practical Exp.</div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="stat_label"><strong><u>CHARISMA</u></strong></div>
+                        <div class="stat_level">15</div>
+                        <div class="stat_description">Customer Service</div>
+                    </div>
+                </section>
+                
+                <!----------CHARACTER MAIN BOXES---------->
+                <section class="char_main_content">
+                    <div class="skills_content_box">
+                        <h2>Skills</h2>
+                    </div>
+                    <div class="exp_logbook_box">
+                        <h2>EXP Logbook</h2>
+                    </div>
+                    <div class="personality_traits_box">
+                        <h2>Personality Traits</h2>
+                    </div>
+                    <div class="equipment_box">
+                        <h2>Equipment</h2>
+                    </div>
+                </section>
+            </section>
+
+        </div>
     </div>
 </body>
 </html>

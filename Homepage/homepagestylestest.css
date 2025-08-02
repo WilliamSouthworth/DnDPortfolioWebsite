@@ -197,6 +197,15 @@ hr {
     background-color: #e7dbc2;
     border: 3px solid black;
     border-radius: 8px;
-    height: 200px;
 }
 
+.char_log_box {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#exp_form_container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e7dbc2;
+}

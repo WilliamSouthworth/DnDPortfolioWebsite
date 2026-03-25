@@ -42,15 +42,60 @@ body {
     gap: 8px;
 }
 
-.nav_bar ul button,
-.nav_bar ul a {
+.nav_bar {
+    grid-area: nav_bar;
+    position: relative;
+    text-align: center;
+}
+
+.nav_bar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 20px;
+    width: 100%;
+    gap: 8px;
+}
+
+.nav_bar ul li {
+    list-style: none;
+}
+
+.nav_bar ul a,
+.nav_bar ul a:visited,
+.nav_bar ul a:hover,
+.nav_bar ul a:active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 40px;
-    font-size: 20px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+
     background-color: #e7dbc2;
     border: 2px solid black;
+    border-radius: 4px;
+
     font-family: inherit;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav_bar ul a:hover {
+    background-color: #d6c5a3;
+    transform: translateY(-2px);
+}
+
+.nav_bar ul a:focus {
+    outline: 2px solid black;
+    outline-offset: 2px;
 }
 
 #nav_links {
@@ -62,11 +107,46 @@ body {
     display: flex;
 }
 
-hr {
-    width: 90%;
-    height: 1px;
-    background-color: black;
+.hamburger {
+    display: block;
+    background: none;
+    font-size: 28px;
     border: none;
+    cursor: pointer;
+    margin: 0 auto 1rem;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    #nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav_bar ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav_bar ul li {
+        flex: 0 1 auto;
+    }
+
+    .nav_bar ul a,
+    .nav_bar ul a:visited,
+    .nav_bar ul a:hover,
+    .nav_bar ul a:active {
+        width: auto;
+    }
 }
 
 .hamburger {
@@ -262,7 +342,6 @@ hr {
         flex: 0 1 auto;
     }
 
-    .nav_bar ul button,
     .nav_bar ul a {
         width: auto;
         padding: 10px 16px;

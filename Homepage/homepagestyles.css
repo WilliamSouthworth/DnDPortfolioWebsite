@@ -1,22 +1,28 @@
 body {
     background-color: #ae6f3b;
-    font-family: 'Georgia', serif;
-    margin: 10px;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 10px;
 }
 
 .parchment_container {
     display: grid;
     background-color: #FCF5E5;
-    grid-template-areas: 
-    "nav_bar nav_bar"
-    "pfp_container char_info_container"
-    "char_stats char_bio"
-    "char_stats char_skills"
-    "char_stats char_equipment"
-    "char_explog char_explog";
+    grid-template-areas:
+        "nav_bar"
+        "pfp_container"
+        "char_info_container"
+        "char_stats"
+        "char_bio"
+        "char_skills"
+        "char_equipment"
+        "char_explog";
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
     min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 .nav_bar {
@@ -32,15 +38,19 @@ body {
     padding: 0;
     margin: 0 auto;
     font-size: 20px;
-    width: 80%;
-    gap: 5px;
+    width: 100%;
+    gap: 8px;
 }
 
-.nav_bar ul button {
+.nav_bar ul button,
+.nav_bar ul a {
     width: 100%;
-    height: 40px;
+    min-height: 40px;
     font-size: 20px;
     background-color: #e7dbc2;
+    border: 2px solid black;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 #nav_links {
@@ -56,17 +66,18 @@ hr {
     width: 90%;
     height: 1px;
     background-color: black;
+    border: none;
 }
 
 .hamburger {
-    display: black;
-    background: none; 
+    display: block;
+    background: none;
     font-size: 28px;
     border: none;
     cursor: pointer;
-    margin: 1rem auto;
-    padding-left: 150px;
-    padding-right: 150px;
+    margin: 0 auto 1rem;
+    padding: 10px 20px;
+    width: 100%;
 }
 
 .pfp_container {
@@ -78,7 +89,7 @@ hr {
 
 .char_pfp {
     width: 100%;
-    max-width: 150px;
+    max-width: 180px;
     height: auto;
     border-radius: 50%;
 }
@@ -89,8 +100,7 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
+    gap: 12px;
 }
 
 .char_info {
@@ -99,39 +109,53 @@ hr {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 5px;
-}
-
-.char_level {
-    margin-top: 5px;
-    aspect-ratio: 1/1;
-    background-color: #e7dbc2;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 10px;
+    gap: 8px;
     text-align: center;
 }
 
+.char_level {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: #e7dbc2;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.char_level h2 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+}
+
 .char_level p {
-    font-size: 15px;
+    margin: 6px 0 0;
+    font-size: 28px;
+    line-height: 1;
 }
 
 .char_stats {
     grid-area: char_stats;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
 }
 
 .stat_box {
     border: 3px solid black;
     border-radius: 8px;
     background-color: #e7dbc2;
-    height: auto;
-    width: 80%;
-    aspect-ratio: 1/1;
     text-align: center;
+    padding: 15px 10px;
+    min-height: 140px;
+    box-sizing: border-box;
 }
 
 .stat_label {
@@ -144,63 +168,54 @@ hr {
 }
 
 .stat_description {
-    margin-top: 20px;
+    margin-top: 15px;
+}
+
+.char_bio,
+.char_skills,
+.char_equipment,
+.char_explog {
+    background-color: #e7dbc2;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .char_bio {
     grid-area: char_bio;
-    background-color: #e7dbc2;
-    border: 3px solid black;
-    border-radius: 8px;
-    padding-left: 15px;
-    padding-right: 5px;
+    text-align: center;
 }
 
 .char_skills {
     grid-area: char_skills;
-    display: flex;
-    flex-direction: column;
-    background-color: #e7dbc2;
-    border: 3px solid black;
-    border-radius: 8px;
 }
 
 .char_equipment {
     grid-area: char_equipment;
-    display: flex;
-    flex-direction: column;
-    background-color: #e7dbc2;
-    border: 3px solid black;
-    border-radius: 8px;
 }
 
-.char_skills, .char_equipment {
-    padding-right: 5px;
+.char_explog {
+    grid-area: char_explog;
 }
 
-.char_skills ul, .char_equipment ul {
+.char_skills ul,
+.char_equipment ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 20px;
 }
 
 .main_box_label {
     text-align: center;
     font-size: 30px;
-    margin-top: 10px
-}
-
-.char_explog {
-    grid-area: char_explog;
-    display: flex;
-    flex-direction: column;
-    background-color: #e7dbc2;
-    border: 3px solid black;
-    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .char_log_box {
-    padding-left: 10px;
     padding-top: 10px;
 }
 
@@ -208,4 +223,111 @@ hr {
     margin-top: 10px;
     padding: 10px;
     background-color: #e7dbc2;
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+    .parchment_container {
+        grid-template-columns: minmax(220px, 280px) minmax(320px, 1fr);
+        grid-template-areas:
+            "nav_bar nav_bar"
+            "pfp_container char_info_container"
+            "char_stats char_stats"
+            "char_bio char_bio"
+            "char_skills char_skills"
+            "char_equipment char_equipment"
+            "char_explog char_explog";
+        align-items: start;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    #nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav_bar ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav_bar ul li {
+        flex: 0 1 auto;
+    }
+
+    .nav_bar ul button,
+    .nav_bar ul a {
+        width: auto;
+        padding: 10px 16px;
+    }
+
+    .char_info_container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .char_info {
+        text-align: left;
+    }
+
+    .char_info_container li {
+        font-size: 25px;
+    }
+
+    .char_level {
+        margin-top: 0;
+        height: 130px;
+        width: 130px;
+    }
+
+    .char_level h2 {
+        font-size: 18px;
+    }
+
+    .char_level p {
+        font-size: 36px;
+    }
+
+    .char_stats {
+        grid-template-columns: repeat(3, minmax(160px, 1fr));
+        gap: 16px;
+    }
+
+    .main_box_label {
+        font-size: 36px;
+    }
+
+    .char_bio p {
+        font-size: 24px;
+    }
+
+    .char_skills ul,
+    .char_equipment ul,
+    .char_explog p {
+        font-size: 24px;
+    }
+}
+
+/* Larger desktop */
+@media (min-width: 1024px) {
+    .char_stats {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Wide desktop */
+@media (min-width: 1280px) {
+    .char_stats {
+        grid-template-columns: repeat(6, minmax(120px, 1fr));
+    }
 }

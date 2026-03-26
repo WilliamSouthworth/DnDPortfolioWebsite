@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previous Parties | Dev Adventurer</title>
-
+    <link rel="icon" type="image/x-icon" href="/PersonalProjects/DnDPortfolioWebsite/images/ravenwebicon.png">
     <link rel="stylesheet" href="css/previousparties.css">
 </head>
 
@@ -12,11 +12,10 @@
     <div class="parchment_container">
 
         <nav class="nav_bar">
-            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Open navigation menu">&#9776;</button>
 
             <ul id="nav_links">
                 <li><a href="index.html">Character Sheet</a></li>
-                <li><a href="backstory.html">Backstory</a></li>
                 <li><a href="previousparties.html">Previous Parties</a></li>
                 <li><a href="quests.html">Quests</a></li>
                 <li><a href="reputation.html">Reputation</a></li>
@@ -26,11 +25,189 @@
         </nav>
 
         <main class="page_content">
-            <h1 class="main_title">Previous Parties</h1>
+            <section class="page_header">
+                <p class="section_label">Career Log</p>
+                <h1 class="main_title">Previous Parties</h1>
+                <p class="page_intro">
+                    Every guild, shop, and questline added new skills to the build. These are the parties
+                    I have joined so far, and the value I brought to each one.
+                </p>
+            </section>
 
-            <div class="content_box">
-                <p>To be filled...</p>
-            </div>
+            <section class="legend_panel content_box">
+                <div class="legend_block">
+                    <h2 class="panel_title">Adventurer Summary</h2>
+                    <p>
+                        Technical support, repair, diagnostics, workflow optimization, automation, customer-facing
+                        problem solving, and practical system troubleshooting across phones, computers, and related tech.
+                    </p>
+                </div>
+
+                <div class="legend_stats">
+                    <div class="stat_chip">
+                        <span class="stat_label">Classes</span>
+                        <span class="stat_value">Technician • Support • Builder</span>
+                    </div>
+                    <div class="stat_chip">
+                        <span class="stat_label">Specialties</span>
+                        <span class="stat_value">Repair • Diagnostics • Optimization</span>
+                    </div>
+                    <div class="stat_chip">
+                        <span class="stat_label">Tools</span>
+                        <span class="stat_value">Python • Excel • Web • Device Repair</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timeline_section">
+                <article class="job_card content_box">
+                    <div class="job_top">
+                        <div>
+                            <p class="job_role_type">Guild Leader / Independent Venture</p>
+                            <h2 class="job_title">Founder & Technician</h2>
+                            <p class="job_company">Independent Phone Repair Business</p>
+                        </div>
+                        <div class="job_meta">
+                            <span class="meta_badge">Fairfax, VA</span>
+                            <span class="meta_badge">Entrepreneurship</span>
+                        </div>
+                    </div>
+
+                    <div class="job_grid">
+                        <div class="job_column">
+                            <h3 class="mini_heading">Class Features</h3>
+                            <ul class="feature_list">
+                                <li>Generated <strong>$6,500+</strong> in revenue through device repair and resale.</li>
+                                <li>Maintained a <strong>less than 3% return rate</strong> through quality control and repair consistency.</li>
+                                <li>Reduced per-repair costs by <strong>22%</strong> using supplier optimization and reusable workflows.</li>
+                                <li>Recovered data from damaged and non-booting phones, helping prevent major customer data loss.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job_column">
+                            <h3 class="mini_heading">Loot Gained</h3>
+                            <div class="tag_group">
+                                <span class="tag">Diagnostics</span>
+                                <span class="tag">Micro-Repair</span>
+                                <span class="tag">Customer Trust</span>
+                                <span class="tag">Resale Strategy</span>
+                                <span class="tag">Cost Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job_card content_box">
+                    <div class="job_top">
+                        <div>
+                            <p class="job_role_type">Party Support / Telecom Frontline</p>
+                            <h2 class="job_title">Wireless Solutions Specialist</h2>
+                            <p class="job_company">AT&amp;T</p>
+                        </div>
+                        <div class="job_meta">
+                            <span class="meta_badge">Centreville, VA</span>
+                            <span class="meta_badge">Technical Support</span>
+                        </div>
+                    </div>
+
+                    <div class="job_grid">
+                        <div class="job_column">
+                            <h3 class="mini_heading">Class Features</h3>
+                            <ul class="feature_list">
+                                <li>Troubleshot complex iOS and Android issues in a customer-facing environment.</li>
+                                <li>Reduced device setup time by roughly <strong>35%</strong> through optimized workflows.</li>
+                                <li>Completed <strong>500+</strong> data migrations, number transfers, and SIM activations with near-zero error.</li>
+                                <li>Helped prevent <strong>$15,000+</strong> in annual losses by spotting fraud risks and invalid transactions.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job_column">
+                            <h3 class="mini_heading">Loot Gained</h3>
+                            <div class="tag_group">
+                                <span class="tag">iOS</span>
+                                <span class="tag">Android</span>
+                                <span class="tag">Fraud Detection</span>
+                                <span class="tag">Workflow Optimization</span>
+                                <span class="tag">Customer Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job_card content_box">
+                    <div class="job_top">
+                        <div>
+                            <p class="job_role_type">Repair Specialist / Field Utility</p>
+                            <h2 class="job_title">Technical Support Specialist</h2>
+                            <p class="job_company">uBreakiFix</p>
+                        </div>
+                        <div class="job_meta">
+                            <span class="meta_badge">Fairfax, VA</span>
+                            <span class="meta_badge">Repair Operations</span>
+                        </div>
+                    </div>
+
+                    <div class="job_grid">
+                        <div class="job_column">
+                            <h3 class="mini_heading">Class Features</h3>
+                            <ul class="feature_list">
+                                <li>Diagnosed and repaired <strong>300+</strong> devices including phones, computers, and consoles.</li>
+                                <li>Restored high-value devices that had been considered non-repairable.</li>
+                                <li>Saved an estimated <strong>$10,000+</strong> annually through successful recoveries.</li>
+                                <li>Reduced average repair time by <strong>20%</strong> through toolkit and workflow improvements.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job_column">
+                            <h3 class="mini_heading">Loot Gained</h3>
+                            <div class="tag_group">
+                                <span class="tag">Advanced Repair</span>
+                                <span class="tag">Triage</span>
+                                <span class="tag">Time Reduction</span>
+                                <span class="tag">Hardware Recovery</span>
+                                <span class="tag">Process Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="job_card content_box">
+                    <div class="job_top">
+                        <div>
+                            <p class="job_role_type">Workshop Builder / Early Questline</p>
+                            <h2 class="job_title">Device Repair Technician</h2>
+                            <p class="job_company">PhoneAxiom</p>
+                        </div>
+                        <div class="job_meta">
+                            <span class="meta_badge">Lynchburg, VA</span>
+                            <span class="meta_badge">Repair + Web Support</span>
+                        </div>
+                    </div>
+
+                    <div class="job_grid">
+                        <div class="job_column">
+                            <h3 class="mini_heading">Class Features</h3>
+                            <ul class="feature_list">
+                                <li>Completed <strong>1,000+</strong> device repairs with a less than <strong>3% return rate</strong>.</li>
+                                <li>Helped drive repeat business through consistent service quality.</li>
+                                <li>Diagnosed hardware failures with roughly <strong>95% accuracy</strong>.</li>
+                                <li>Built the foundation of the company’s customer-facing website, saving about <strong>$5,000+</strong> in contractor costs.</li>
+                            </ul>
+                        </div>
+
+                        <div class="job_column">
+                            <h3 class="mini_heading">Loot Gained</h3>
+                            <div class="tag_group">
+                                <span class="tag">Hardware Diagnosis</span>
+                                <span class="tag">Website Foundations</span>
+                                <span class="tag">Customer Experience</span>
+                                <span class="tag">Repair Accuracy</span>
+                                <span class="tag">Small Business Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </main>
 
     </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Raven | Dev Adventurer</title>
-
+    <link rel="icon" type="image/x-icon" href="/PersonalProjects/DnDPortfolioWebsite/images/ravenwebicon.png">
     <link rel="stylesheet" href="css/sendraven.css">
 </head>
 
@@ -16,7 +16,6 @@
 
             <ul id="nav_links">
                 <li><a href="index.html">Character Sheet</a></li>
-                <li><a href="backstory.html">Backstory</a></li>
                 <li><a href="previousparties.html">Previous Parties</a></li>
                 <li><a href="quests.html">Quests</a></li>
                 <li><a href="reputation.html">Reputation</a></li>
@@ -26,15 +25,40 @@
         </nav>
 
         <main class="page_content">
-            <h1 class="main_title">Send Raven</h1>
+            <div class="raven_heading">
+                <span class="raven_icon left">🐦‍⬛</span>
+                <h1 class="main_title">Send Raven</h1>
+                <span class="raven_icon right">🐦‍⬛</span>
+            </div>
 
-            <div class="content_box">
-                <p>To be filled...</p>
+            <div class="content_box raven_box">
+                <p class="raven_intro">
+                    Have a quest, opportunity, or message to share? Send a raven below.
+                </p>
+
+                <form class="raven_form" id="ravenForm" action="https://formspree.io/f/mwvwkdge" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="7" required></textarea>
+
+                    <button type="submit" class="send_raven_btn" id="sendRavenBtn">
+                        <span class="btn_text">Send Off Raven</span>
+                        <span class="btn_raven">🕊️</span>
+                    </button>
+
+                    <p class="form_status" id="formStatus" aria-live="polite"></p>
+                </form>
             </div>
         </main>
 
     </div>
 
     <script src="js/scripts.js"></script>
+
 </body>
 </html>

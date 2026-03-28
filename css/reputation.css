@@ -145,8 +145,14 @@ hr {
 }
 
 .content_box p,
-.content_box li {
-    line-height: 1.7;
+.content_box li,
+label,
+input,
+select,
+textarea,
+button {
+    line-height: 1.6;
+    font-family: inherit;
 }
 
 .content_box ul {
@@ -174,13 +180,6 @@ hr {
     font-size: 1.4rem;
 }
 
-.quest_meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 14px;
-}
-
 .quest_badge {
     display: inline-flex;
     align-items: center;
@@ -191,19 +190,6 @@ hr {
     border-radius: 999px;
     font-size: 0.92rem;
     font-weight: bold;
-}
-
-.quest_grid {
-    display: grid;
-    gap: 18px;
-}
-
-.quest_section_title {
-    margin: 0 0 10px;
-    color: var(--accent);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
 }
 
 .tag_group {
@@ -222,11 +208,149 @@ hr {
     font-weight: bold;
 }
 
-@media (min-width: 700px) {
-    .quest_grid {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-    }
+/* Reputation-specific styles */
+.reputation_intro {
+    position: relative;
+}
+
+.guild_notice {
+    margin-top: 0;
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+.reputation_layout {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.reputation_form_box,
+.reputation_side_panel {
+    position: relative;
+}
+
+.reputation_form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_group label {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid rgba(42, 30, 20, 0.45);
+    border-radius: 8px;
+    background: #f9f1dc;
+    color: var(--ink);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(155, 107, 31, 0.15);
+}
+
+.checkbox_group {
+    margin-top: 4px;
+}
+
+.checkbox_label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: normal;
+    color: var(--ink);
+}
+
+.checkbox_label input {
+    width: auto;
+    margin-top: 4px;
+}
+
+.form_actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.guild_button {
+    padding: 12px 18px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #f3e4bf, #dfc690);
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.guild_button:hover,
+.guild_button:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(to bottom, #f7e9c7, #e7d5ab);
+}
+
+.standing_block + .standing_block {
+    margin-top: 18px;
+}
+
+.standing_label {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.92rem;
+}
+
+.standing_value {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.testimonial_archive {
+    width: 100%;
+    display: grid;
+    gap: 18px;
+}
+
+.testimonial_card {
+    position: relative;
+}
+
+.testimonial_header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial_meta {
+    margin-top: 0;
+    font-style: italic;
+    color: rgba(31, 23, 16, 0.8);
 }
 
 @media (min-width: 768px) {
@@ -249,6 +373,25 @@ hr {
     .nav_bar ul a:focus {
         width: auto;
         min-width: 150px;
+    }
+
+    .reputation_layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .reputation_form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .full_width {
+        grid-column: 1 / -1;
+    }
+
+    .testimonial_header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 

@@ -27,9 +27,119 @@
         <main class="page_content">
             <h1 class="main_title">Reputation</h1>
 
-            <div class="content_box">
-                <p>To be filled...</p>
-            </div>
+            <section class="content_box reputation_intro">
+                <p class="guild_notice">📜 Entries from past employers, collaborators, and fellow adventurers.</p>
+                <p>
+                    This ledger is open to those who have worked beside me on projects, jobs, and creative builds.
+                    Leave a record of your experience below.
+                </p>
+            </section>
+
+            <section class="reputation_layout">
+                <article class="content_box reputation_form_box">
+                    <h2>Record a Testimonial</h2>
+                    <p>
+                        Share your role, the nature of our quest, and your experience working with me.
+                    </p>
+
+                    <form class="reputation_form" action="https://formspree.io/f/mwvwkdge" method="post">
+                        <div class="form_group">
+                            <label for="reviewer-name">Your Name</label>
+                            <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Captain Elara Dawnforge">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="reviewer-role">Your Role / Company</label>
+                            <input type="text" id="reviewer-role" name="reviewer-role" placeholder="Hiring Manager at Ironkeep Labs">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="quest-type">How We Worked Together</label>
+                            <select id="quest-type" name="quest-type">
+                                <option value="">Select one</option>
+                                <option value="employment">Manager or Employer</option>
+                                <option value="coworker">Coworker or Teammate</option>
+                                <option value="client">Client</option>
+                                <option value="freelance">Freelance Project</option>
+                                <option value="mentor">Mentor or Instructor</option>
+                                <option value="academic">Classmate or Academic Project</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="rating">Guild Rating</label>
+                            <select id="rating" name="rating">
+                                <option value="">Select a rating</option>
+                                <option value="5">★★★★★ - Legendary</option>
+                                <option value="4">★★★★☆ - Excellent</option>
+                                <option value="3">★★★☆☆ - Strong</option>
+                                <option value="2">★★☆☆☆ - Fair</option>
+                                <option value="1">★☆☆☆☆ - Modest</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group full_width">
+                            <label for="review-title">Title of Testimony</label>
+                            <input type="text" id="review-title" name="review-title" placeholder="A dependable and creative developer">
+                        </div>
+
+                        <div class="form_group full_width">
+                            <label for="review-message">Your Testimony</label>
+                            <textarea id="review-message" name="review-message" rows="7" placeholder="Share what it was like working with me, how I contributed, and what stood out."></textarea>
+                        </div>
+
+                        <div class="form_group full_width checkbox_group">
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="permission" required>
+                                I grant permission for this testimonial to be displayed on the site.
+                            </label>
+                        </div>
+
+                        <div class="form_actions full_width">
+                            <button type="submit" class="guild_button">Seal Testimony</button>
+                        </div>
+                    </form>
+                </article>
+
+                <aside class="content_box reputation_side_panel">
+                    <h2>Guild Ledger</h2>
+                
+                    <div class="standing_block">
+                        <p class="standing_label">Current Status</p>
+                        <p class="standing_value">No records yet</p>
+                    </div>
+                
+                    <div class="standing_block">
+                        <p class="standing_label">Reputation</p>
+                        <p>
+                            This ledger is awaiting its first entry.
+                            Once testimonials are submitted and approved, they will appear here.
+                        </p>
+                    </div>
+                
+                    <div class="standing_block">
+                        <p class="standing_label">Note</p>
+                        <p>
+                            All submissions are reviewed before being recorded in the  archives.
+                        </p>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="testimonial_archive">
+                <article class="quest_card testimonial_card">
+                    ...
+                </article>
+            
+                <article class="quest_card testimonial_card">
+                    ...
+                </article>
+            
+                <article class="quest_card testimonial_card">
+                    ...
+                </article>
+            </section>
         </main>
 
     </div>
